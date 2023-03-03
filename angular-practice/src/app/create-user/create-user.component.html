@@ -1,0 +1,13 @@
+<div class="main-div">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>
+      Name:
+    </label>
+    <input formControlName="name" type="text" required/>
+    <label>
+      Email:
+    </label>
+    <input formControlName="email" type="email" required/>
+    <button type="submit" [disabled]="userForm.invalid">Create User</button>
+  </form>
+</div>
